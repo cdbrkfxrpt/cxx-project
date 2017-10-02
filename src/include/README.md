@@ -1,0 +1,3 @@
+# In this directory...
+
+... put your header files.
