@@ -23,6 +23,8 @@ set (cxx-project_VERSION_PATCH 0)
 if (CMAKE_COMPILER_IS_GNUCXX)
   if (CMAKE_CXX_COMPILER_VERSION VERSION_LESS 6.0)
     message (FATAL_ERROR "g++ 6.0 or later required.")
+  else ()
+    message (WARNING "Compiler needs to be fairly recent for this to compile.")
   endif ()
 endif ()
 #
