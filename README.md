@@ -1,21 +1,23 @@
-# Dieses Repository...
+# This repository...
 
-... enthält eine (mehr oder weniger sinnvolle) Grundkonfiguration für
-C++-Projekte (für Qt Projekte gäbe es unter Umständen eine sinnvollere
-Struktur, das war aber auch nicht der Fokus).
+... contains a more or less viable basic configuration for C++ projects using
+CMake.
 
-## Hauptfeatures
+## Main features
 
-- mehr oder weniger brauchbare Projektstruktur mit mehr oder weniger sinnvollen
-  CMake Files (am besten einfach mal durchschauen und so umbauen, dass es
-  passt)
-- vorkonfiguriertes Doxyfile für doxygen
-- fertige .clang-format Konfiguration
-- Ordner fuer Tests mit catch und main und CMake (auch nicht genau so getestet,
-  aber fast unverändert bei
-  [scruBB](https://gitlab.ingenieurbuero-krug.de/ibk/scruBB) im Einsatz)
+- directory structure with a bunch of CMakeFiles showing a bunch of (imho)
+  useful features of CMake (it's probably best you go through them and throw
+  away what you don't need)
+- preconfigured Doxyfile for doxygen documentation generator. Pictures go in
+`./misc`, code examples go in `./doc/examples`.
+- my very own and therefore best `clang-format` config
+- a `tests` directory containing [catch](https://catch-lib.net) - shoutout to
+  Catch, which is awesome imho - a `main.cc` to speed up your builds an a
+  `CMakeLists.txt`; just put your tests in files there and add them to the
+  target list in the CMake file
 
-**ENDE ERKLÄRUNG, BEGINN BEISPIEL-README**
+
+**here's also an example README for you to use/discard:**
 
 
 _Project Name_
