@@ -1,5 +1,5 @@
-# --------------------------------------------------------------------------- #
-# Copyright yyyy Full Name <full.name@emailprovider.tld>
+#
+# Copyright 2017- Author Write <author.write@esp.tld>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,7 +12,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-# --------------------------------------------------------------------------- #
+#
 
 #
 # start out by looking for libraries you might need
@@ -53,8 +53,8 @@ if (LIB_FOUND)
   #
   # set target include directories properly
   target_include_directories (${STAGE_TWO_NAME} PUBLIC
-    ${cxx-project_SOURCE_DIR}/src/include
-    ${cxx-project_SOURCE_DIR}/src/thirdparty
+    ${cxx-project_SOURCE_DIR}/include
+    ${cxx-project_SOURCE_DIR}/thirdparty
   )
   #
   # set libraries to link target against

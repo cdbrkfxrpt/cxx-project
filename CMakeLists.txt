@@ -1,5 +1,5 @@
-# --------------------------------------------------------------------------- #
-# Copyright yyyy Full Name <full.name@emailprovider.tld>
+#
+# Copyright 2017- Author Write <author.write@esp.tld>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,7 +12,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-# --------------------------------------------------------------------------- #
+#
 
 #
 # require CMake version >= 3.8 to make sure it knows C++17
@@ -45,7 +45,7 @@ set (CMAKE_CXX_STANDARD 17)
 set (CMAKE_CXX_STANDARD_REQUIRED ON)
 set (CMAKE_CXX_EXTENSIONS OFF)
 #
-add_compile_options (-Wall -Wextra -Wpedantic -Werror -Wfatal-errors)
+add_compile_options (-Wall -Wextra -Wpedantic -Werror)
 #
 
 #
