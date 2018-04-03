@@ -21,11 +21,7 @@ cmake_minimum_required (VERSION 3.8)
 
 #
 # set project name and version
-project (cxx-project CXX)
-#
-set (cxx-project_VERSION_MAJOR 1)
-set (cxx-project_VERSION_MINOR 0)
-set (cxx-project_VERSION_PATCH 0)
+project (cxx-project VERSION 1.0.0 LANGUAGES CXX)
 #
 
 #
