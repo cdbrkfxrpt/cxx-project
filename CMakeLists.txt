@@ -25,13 +25,26 @@ project (cxx-project VERSION 1.0.0 LANGUAGES CXX)
 #
 
 #
+# die if on Windows
+if (NOT UNIX)
+  message (FATAL_ERROR "I don't build on non-UNIX because I'm untested there.")
+endif ()
+#
+
+#
 # detect compiler
-if (CMAKE_COMPILER_IS_GNUCXX)
-  if (CMAKE_CXX_COMPILER_VERSION VERSION_LESS 6.0)
-    message (FATAL_ERROR "g++ 6.0 or later required.")
-  else ()
-    message (WARNING "Compiler needs to be fairly recent for this to compile.")
+if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+  if (CMAKE_CXX_COMPILER_VERSION VERSION_LESS 7.2.0)
+    message (FATAL_ERROR "g++ 7.2.0 or later required.")
   endif ()
+elseif (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+  if (CMAKE_CXX_COMPILER_VERSION VERSION_LESS 5.0.0)
+    message (FATAL_ERROR "clang 5.0.0 or later required.")
+  endif()
+  add_compile_options (-stdlib=libc++ -flto=thin)
+else ()
+  message (FATAL_ERROR
+    "Only GNU gcc (7.2.0+) or LLVM clang (5.0.0+) compile this.")
 endif ()
 #
 
