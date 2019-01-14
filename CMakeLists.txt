@@ -41,7 +41,10 @@ elseif (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
   if (CMAKE_CXX_COMPILER_VERSION VERSION_LESS 5.0.0)
     message (FATAL_ERROR "clang 5.0.0 or later required.")
   endif()
-  add_compile_options (-stdlib=libc++ -flto=thin)
+  # comment the following two lines in if using full LLVM toolchain on Linux.
+  # WARNING: CMake 3.13+ REQUIRED for add_link_options command
+  # add_compile_options (-stdlib=libc++)
+  # add_link_options(-stdlib=libc++ -fuse-ld=lld -lc++abi -flto=thin)
 else ()
   message (FATAL_ERROR
     "Only GNU gcc (7.2.0+) or LLVM clang (5.0.0+) compile this.")
